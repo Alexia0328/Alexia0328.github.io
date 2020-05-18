@@ -50,8 +50,17 @@ p {
 .question {
   background-color: #e0f3f8;
   color: #4292c6;
-  margin: 20px;
+  margin: 30px;
   padding: 20px;
+}
+
+.likert li{
+  float: left;
+  text-align: left;
+  list-style-type: none;
+  margin: auto;
+  right: 500px;
+  width: 90px;
 }
 
 /* Defining styling for a specific element type - large block buttons */
