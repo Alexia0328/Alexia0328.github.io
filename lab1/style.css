@@ -52,6 +52,7 @@ p {
   color: #4292c6;
   margin: 30px;
   padding: 20px;
+  border-radius: 10px;
 }
 
 .likert li{
@@ -61,6 +62,8 @@ p {
   margin: auto;
   right: 500px;
   width: 90px;
+  border: 1px solid beige;
+  background-color: white;
 }
 
 /* Defining styling for a specific element type - large block buttons */
@@ -73,6 +76,7 @@ p {
   font-size: 10px;
   cursor: pointer;
   text-align: center;
+  border-radius: 24px;
 }
 
 /* Defining styling for a specific element with an id */
