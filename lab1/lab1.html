@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>Survey</title>
+
+	<style type="text/css">
+    
+    .likert li
+    {
+        float: left;
+        text-align: left;
+        list-style-type: none;
+    }
+    </style>
+
+</head>
+<body>
+	
+	<div>
+		<img src="https://image.flaticon.com/icons/png/512/1169/1169549.png" alt="survey image" width="100" height="100">
+		<h1>Survey</h1> 
+		<h3>about programming language</h3>
+	</div>
+	<br>
+
+
+	<form action="index.php" name="my form" method="POST" accept-charset="utf-8">
+		<div class="question">
+			First name:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="firstname">
+			<br>
+			Last name:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="lastname">	
+		</div>
+		<br>
+
+		<div class="question">
+			Have you ever studied programming?
+			<br>
+			<input type="radio" name="yesorno" value="yes"> Yes
+			<br>
+			<input type="radio" name="yesorno" value="no"> No
+		</div>
+		<br>
+
+		<div class="question">
+        	<ul class="likert">
+        		Do you like programming?
+        		<br>
+            	<li class="likert">&nbsp;1<input id="niveau1" type="radio" name="niveau" value="1" />
+           		<li class="likert">&nbsp;2<input id="niveau2" type="radio" name="niveau" value="2" />
+            	<li class="likert">&nbsp;3<input id="niveau3" type="radio" name="niveau" value="3" />
+            	<li class="likert">&nbsp;4<input id="niveau4" type="radio" name="niveau" value="4" />
+            	<li class="likert">&nbsp;5<input id="niveau5" type="radio" name="niveau" value="5" />
+        	</ul>
+        	<br>
+    	</div>
+    	<br>
+
+
+		<div class="question">
+			Which programming language you are best at?
+			<br>
+			<select name="favourite">
+				<option value="select" selected="selected">--Select--</option>
+				<option value="C++">C++</option>
+				<option value="Java">Java</option>
+				<option value="Python">Python</option>
+				<option value="R">R</option>
+				<option value="Ruby">Ruby</option>
+				<option value="Other">Other...</option>
+			</select>
+		</div>
+		<br>
+
+		<div class="question">
+			Which of the following programming languages are you already familiar with?
+			<br>
+			<input type="checkbox" name="C++" value="C++"> C++
+			<br>
+			<input type="checkbox" name="Java" value="Java"> Java
+			<br>
+			<input type="checkbox" name="Python" value="Python"> Python
+			<br>
+			<input type="checkbox" name="R" value="R"> R
+			<br>
+			<input type="checkbox" name="Ruby" value="Ruby"> Ruby
+			<br>
+			<input type="checkbox" name="None" value="None"> None
+		</div>
+		<br>
+
+		<div class="question">
+			Which of the following programming languages would you like to learn?
+			<br>
+			<input type="checkbox" name="C++" value="C++"> C++
+			<br>
+			<input type="checkbox" name="Java" value="Java"> Java
+			<br>
+			<input type="checkbox" name="Python" value="Python"> Python
+			<br>
+			<input type="checkbox" name="R" value="R"> R
+			<br>
+			<input type="checkbox" name="Ruby" value="Ruby"> Ruby
+			<br>
+			<input type="checkbox" name="None" value="None"> None
+		</div>
+		<br>
+
+		<div class="question">
+			What <a href="https://en.wikipedia.org/wiki/List_of_programming_languages">other unmentioned programming</a> languages would you like to learn:
+			<br>
+			<input type="text" name="firstname">
+		</div>
+		<br>
+
+		<!-- 评论框 -->
+		<div class="question">
+			<p>Comments:</p>
+			<textarea rows="1" cols="40"></textarea>			
+		</div>
+
+		<button id="submitButton" type="button" class="block">
+			<p>SUBMIT YOUR QUESTIONNAIRE</p>
+		</button>
+
+		<br>
+
+
+		<p id="signature">Site created by Xinyi HE</p>	
+
+
+	</form>
+	
+	
+
+
+</body>
+</html>

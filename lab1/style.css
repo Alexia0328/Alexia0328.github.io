@@ -1,0 +1,75 @@
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+html {
+  background-color: #4575b4;
+
+}
+ 
+body {
+  background-color: #91bfdb;
+  margin: auto;
+  width: 600px;
+  border: 20px solid white;
+  padding: 40px 100px 100px 80px;
+  
+}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	margin: 0;
+	padding: 20px 0;
+	color: #FFFFCC;  /* Fuchsia */
+	text-shadow: 3px 3px 1px grey;
+}
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  color: #FFFFCC;  /* Fuchsia */
+  text-shadow: 3px 3px 1px grey;
+}
+
+
+img {
+  display: block;
+  margin: 0 auto;
+  align: center;
+}
+
+p {
+  color: #4292c6;
+}
+
+
+/* Defining styling for a specific element type - each question */
+.question {
+  background-color: #e0f3f8;
+  color: #4292c6;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Defining styling for a specific element type - large block buttons */
+.block {
+  margin: auto;
+  display: block;
+  width: 40%;
+  background-color: white; 
+  padding: 1px 1px;
+  font-size: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Defining styling for a specific element with an id */
+#signature {
+  text-align: right;
+  color: #deebf7;
+  font-style: italic;
+  font-size: 75%;
+}
