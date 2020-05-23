@@ -1,6 +1,3 @@
-/* Style sheet
-   color picker www.w3schools.com/colors/colors_picker.asp
-*/
 
 html {
   background-color: #4575b4;
@@ -21,7 +18,7 @@ h1 {
 	text-align: center;
 	margin: 0;
 	padding: 20px 0;
-	color: #FFFFCC;  /* Fuchsia */
+	color: #FFFFCC; 
 	text-shadow: 3px 3px 1px grey;
 }
 
@@ -30,7 +27,7 @@ h3 {
   text-align: center;
   margin: 0;
   padding: 20px 0;
-  color: #FFFFCC;  /* Fuchsia */
+  color: #FFFFCC;  
   text-shadow: 3px 3px 1px grey;
 }
 
@@ -46,7 +43,6 @@ p {
 }
 
 
-/* Defining styling for a specific element type - each question */
 .question {
   background-color: #e0f3f8;
   color: #4292c6;
@@ -55,18 +51,6 @@ p {
   border-radius: 10px;
 }
 
-.likert li{
-  float: left;
-  text-align: left;
-  list-style-type: none;
-  margin: auto;
-  right: 500px;
-  width: 90px;
-  border: 1px solid beige;
-  background-color: white;
-}
-
-/* Defining styling for a specific element type - large block buttons */
 .block {
   margin: auto;
   display: block;
@@ -79,7 +63,6 @@ p {
   border-radius: 24px;
 }
 
-/* Defining styling for a specific element with an id */
 #signature {
   text-align: right;
   color: #deebf7;
