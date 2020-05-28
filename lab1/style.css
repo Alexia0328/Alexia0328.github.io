@@ -63,7 +63,7 @@ p {
   border-radius: 24px;
 }
 
-.signature {
+#signature {
   text-align: right;
   color: #deebf7;
   font-style: italic;
