@@ -1,72 +1,75 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
-	<link href="style.css" rel="stylesheet" type="text/css">
-</head>
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+html {
+  background-color: #ffe9c5;
 
-<body>
-	<img src="./img/FreshLogo.jpg" width="200" height="150">
-	<h1>FRESH-FOOD Shop</h1>
+}
 
-<div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-</div>
+img {
+  display: block;
+  margin: 0 auto;
+  align: center;
+}
 
-<div id="Client" class="tabcontent">
-  	<h3>Client Information</h3>
- 	<p>Tell us a bit about you.</p>
-  	<div class="question">
-		First name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="firstname">
-		<br>
-		Last name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="lastname">
-		<br>
-		Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email">
-		<br>
-		Phone number:&nbsp;<input type="text" name="phonenumber">
-	</div>
-	<br>
-	<br>
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  color: #ffacb7; 
+  text-shadow: 3px 3px 1px grey;
+}
 
-	Choose a Category:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-	<option value=""></option>
-	<option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">GlutenFree</option>
-    <option value="Vegetarian">Vegetarian&GlutenFree</option>
-    <option value="Vegetarian">OrganicProducts</option>
-    <option value="None">None</option>
-	</select>
-</div>
 
-<div id="Products" class="tabcontent">
-  <h3>Your targeted products</h3>
-  <p>We preselected products based on your restrictions.</p>
-	 Choose items to buy:
-	 <div id="displayProduct"></div>
-	 <br>
-	 <br>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
-	</button>
-	<br>
-</div>
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
 
-<div id="Cart" class="tabcontent">
-  <h3>Cart</h3>
-  <p>Here is your cart.</p>
-  <div id="displayCart"></div>
-</div>
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: #ffacb7;
+}
 
-<br><br><br><br>
-<div id="signature" class="signature">
-	Site created by Xinyi HE
-</div>
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #FFCCCC;
+}
 
-<script src="groceries.js"></script>
-<script src="main.js"></script>
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #DDE0E1;
+}
 
-</body>
-</html>
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #f9f9f9;
+  color: #66CCCC;
+}
+
+.tabcontent button{
+  background: #f9f9f9;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 24px;
+}
+
+
+.signature {
+  text-align: center;
+  color: #ffacb7;
+  font-style: italic;
+  font-size: 100%;
+}
