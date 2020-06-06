@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+	<title>FRESH-FOOD Shop</title>
+</head>
+
+<body>
+	<img src="./img/FreshLogo.jpg" width="200" height="150">
+	<h1>FRESH-FOOD Shop</h1>
+
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">
+  	client
+  	<img src="./img/person.png" width="30" height="25"></button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">
+  	Products
+  	<img src="./img/item.png" width="30" height="25"></button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">
+  	Cart
+  	<img src="./img/cart.png" width="30" height="25"></button>
+</div>
+
+
+
+
+<div id="Client" class="tabcontent">
+	<h2>Instruction</h2>
+	<h3>-------- Welcome to the Fresh Food Supermarket --------</h3>
+	<h3>You can choose products according to your dietary preferences.</h3>
+	<h3>· Vegetarian</h3>
+	<h4>  Vegetarianism is the practice of abstaining from the consumption of meat (red meat, poultry, seafood, and the flesh of any other animal), and may also include abstention from by-products of animal slaughter.</h4>
+	<h3>· Gluten-free diet</h3>
+	<h4>  A gluten-free diet (GFD) is a diet that strictly excludes gluten, which is a mixture of proteins found in wheat (and all of its species and hybrids, such as spelt, kamut, and triticale), as well as barley, rye, and oats.</h4>
+	<h3>· Organic food</h3>
+	<h4>Organic food is food produced by methods that comply with the standards of organic farming. Standards vary worldwide, but organic farming features practices that cycle resources, promote ecological balance, and conserve biodiversity. Organizations regulating organic products may restrict the use of certain pesticides and fertilizers in the farming methods used to produce such products. Organic foods typically are not processed using irradiation, industrial solvents, or synthetic food additives.</h4>
+	<h5> -- From Wikipedia</h5>
+
+	<br>
+  	<h3>Client Information</h3>
+ 	<p>Please fill in your personal informations</p>
+  	<div class="question">
+		First name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="firstname">
+		<br>
+		Last name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="lastname">
+		<br>
+		Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email">
+		<br>
+		PhoneNumber:&nbsp;&nbsp;&nbsp;<input type="text" name="phonenumber">
+	</div>
+	<br>
+	<br>
+	<button id="submitButton" type="button" class="block">
+		<p>SUBMIT YOUR QUESTIONNAIRE</p>
+	</button>
+
+	<br><br>
+
+	Your dietary preferences:
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value="">----Select----</option>
+	<option value="Vegetarian">Vegetarian</option>
+    <option value="GlutenFree">GlutenFree</option>
+    <option value="Vegetarian">Vegetarian&GlutenFree</option>
+    <option value="Vegetarian">OrganicProducts</option>
+    <option value="None">None</option>
+	</select>
+	<br><br>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We have pre-selected the product according to your preference.</p>
+	 Choose items to buy:
+	 <div id="displayProduct"></div>
+	 <br>
+	 <br>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+	<br>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>You have selected these items.</p>
+  <div id="displayCart"></div>
+</div>
+
+
+
+<br><br><br><br>
+<div id="signature" class="signature">
+	Site created by Xinyi HE
+</div>
+
+<script src="groceries.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
