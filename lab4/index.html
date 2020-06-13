@@ -1,0 +1,324 @@
+
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>NO.8 HAIR SALON</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="title-background p-3 my-3 border text-white">
+        <br><br>
+        <h1 class="font-italic">Welcome to NO.8 HAIR STUDIO </h1>
+        <br>
+        <h3 class="font-italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The most fashionable hairstyles</h3>
+    </div>
+
+    <!-- form uottawa.ca -->
+    <div id="main-content-wrapper" class="uol--page-container uol--clearfix">
+        <main id="main-content" class="uol--clearfix">
+            <div class="uos--full-width" id="uottawa_covid19">        
+                <div style="padding: 20px; background-color: white; margin: auto;" class="uos--standard-width--always uos--standard-width">          
+                    <img src="https://www.uottawa.ca/coronavirus/sites/www.uottawa.ca.coronavirus/files/infoicon-35x35.png" alt="info" style="width: 35px; height: 35px; float: left; margin-top: -8px; ">
+                    <span style="margin-left: 20px; margin-top: 12px; " class="font-italic">
+                        <strong><a href="https://www.uottawa.ca/coronavirus/en" style="color:red;font-size:1rem;">NO.8 HAIR SALON in response to COVID-19 change</a>          
+                        </strong>
+                    </span> 
+                    <br><br>
+                    <div class="alert alert-warning alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Warning!</strong> Please wear a mask when entering the shop. We will take the temperature of every customer!
+                    </div>      
+                </div>     
+            </div>
+        </main>
+    </div>      
+
+
+
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <div class="row p-3">
+        <div class="col-sm-3 pl-5">
+            <button id="Service" type="Service" class="font-italic">Service</button>
+        </div>
+        <div class="col-sm-3 pl-5">
+            <button id="Calendar" type="Calendar" class="font-italic">Calendar</button>
+        </div>
+        <div class="col-sm-3 pl-5">
+            <button id="Payment" type="Payment" class="font-italic">Payment</button>
+        </div>
+        <div class="col-sm-3 pl-5">
+            <button id="Where" type="Where" class="font-italic">Where to find us</button>
+        </div>
+    </div>
+
+
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <div class="aboutus p-3 my-3 border text-white">
+        <h3 class="font-italic">About NO.8 Hair Salon</h3>
+        <p>Since the opening of NO.8 Hair Salon in 2012,</p>
+        <p>we have been focusing on fashion hair salon, which has been well received by our customers. </p>
+        <p>We have three good barbers and other staff. </p>
+        <p class="text-uppercase">NO.8 Hair Salon is at your service.</p>
+    </div>
+    <br>
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div class="container">
+        <h2 class="font-italic">SERVICES</h2>
+        <p>Here is a list of services offered</p>            
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="font-italic">Service</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="font-italic">Haircut</td>
+                <td>Wash, cut and style. Price varies depending on hairdressers. </td>
+                <td>CA$45.00 - CA$75.00</td>
+            </tr>
+            <tr>
+                <td class="font-italic">Blowdry + Curls</td>
+                <td>Wash and blowdry, plus curls. Price varies depending on hairdressers. </td>
+                <td>CA$15.00 - CA$40.00</td>
+            </tr>
+            <tr>
+                <td class="font-italic">Coloring</td>
+                <td>Wash and coloring.Price varies depending on hairdressers.</td>
+                <td>CA$75.00 - CA$120.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+
+    <div class="container">
+        <h2 class="font-italic">Our designs</h2>
+        <br>
+        <div class="card-columns">
+            <div style="width:200px">
+                <img class="card-img-top" src="images/shorthair.png" alt="short hair" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Short hair</h4>
+                </div>
+            </div>
+            <div style="width:200px">
+                <img class="card-img-top" src="images/mediumhair.png" alt="medium hair" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Short hair</h4>
+                </div>
+            </div>
+            <div style="width:200px">
+                <img class="card-img-top" src="images/longhair.png" alt="long hair" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Short hair</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div class="container p-3">
+        <h2 class="font-italic">Meet our hairdressers</h2>
+        <br>
+        <div class="card-columns">
+            <div class="card bg-warning" style="width:200px">
+                <img class="card-img-top" src="images/hairdressers1.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Kelly</h4>
+                    <p class="card-text">Kelly has been cutting hair for 1 years. She is good at designing women's hairstyles.</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Service Price</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Haircut CA$60.00</p>
+                        <p>Blowdry + Curls CA$25.00</p>
+                        <p>Coloring CA$75.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-warning" style="width:200px">
+                <img class="card-img-top" src="images/hairdressers2.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Andy</h4>
+                    <p class="card-text">Andy has been cutting hair for 5 years. He is good at designing men's hairstyles.</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Service Price</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Haircut CA$75.00</p>
+                        <p>Blowdry + Curls CA$15.00</p>
+                        <p>Coloring CA$90.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-warning" style="width:200px">
+                <img class="card-img-top" src="images/hairdressers3.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Jessi</h4>
+                    <p class="card-text">Jessi has been cutting hair for 4 years. She is good at dyeing hair and styling it.</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Service Price</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Haircut CA$45.00</p>
+                        <p>Blowdry + Curls CA$45.00</p>
+                        <p>Coloring CA$120.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+    <div class="container">
+        <div class="container-md p-3 my-3">
+            <h3 class="font-italic">BOOK NOW</h3>
+            <p>Select the option that suits you</p>
+        </div>
+
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService"><p id="choice">Choose a service</p></a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Here is our list of services</p>
+                        <input type="checkbox" name="Consistency" value="Consistency"> Haircut
+                        <br>
+                        <input type="checkbox" name="Efficiency" value="Efficiency"> Blowdry + Curls
+                        <br>
+                        <input type="checkbox" name="Usability" value="Usability"> Coloring
+                        <br>
+                    </div>
+                </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate"><p id="choice">Choose a date</p></a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>What date?</p>
+                        <!-- Bootstrap has various input components. Some examples are given here: -->
+                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <div class="form-group row">
+                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                            <div class="col-10">
+                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo"><p id="choice">Your info</p></a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Your information so we can contact you</p>
+                        <p>Form to enter name, email, phone</p>
+                        <div class="question">
+                            First name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="firstname">
+                            <br><br>
+                            Last name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="lastname">
+                            <br><br>
+                            Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email">
+                            <br><br>
+                            PhoneNumber:&nbsp;&nbsp;<input type="text" name="phonenumber">
+                        </div>
+                        <br><br>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <button type="button">Submit your information</button>
+    <br><br>
+</div>
+
+<br><br>
+
+<footer>
+    <div class="footer">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <hr class="light">    
+                    <img src="images/Scissors.png" alt="footer logo" width="20px" height="20px">
+                <hr class="light">
+                <p>819-830-0328</p>
+                <p>Alexiah0328@gmail.com</p>
+                <p>265 Laurier Ave E</p>
+                <p>Ottawa, ON, K1N, 6P7</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our Hours</h5>
+                <hr class="light">
+                <p>Monday - Friday: 10am - 8pm</p>
+                <p>Saturday: 12pm - 9pm</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Avalible Store</h5>
+                <hr class ="light">
+                <p>Calgary, AB</p>
+                <p>Toronto, ON</p>
+                <p>Montreal, QC</p>
+                <p>Ottawa, ON</p>
+                <p>Vancouver, BC</p>
+            </div>
+            <div class="col-12">
+                <hr class="light">
+                <h3 class="font-italic">NO.8 HAIR SALON</h3>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
