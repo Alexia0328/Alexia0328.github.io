@@ -21,6 +21,10 @@ body{
 	color: grey;
 }
 
+a{
+	color: grey;
+}
+
 .title-background{
 	background-image: url("images/hairsalon.jpg");
 	height: 300px;
@@ -54,6 +58,7 @@ body{
 	background-color: #fcf8e8;
 	border-color: white;
 }
+
 .table{
 	background-color: #fcf8e8;
 	border-color: white;
@@ -63,7 +68,6 @@ body{
 .footer {
 	background-color: #e7dfd5;
 	border: 1px beige;
-	width: 1500px;
 	margin: auto;
 }
 
@@ -77,6 +81,3 @@ body{
 	border-radius: 10px;
 	border: 1px solid #ccc;
 }
-
-
-
