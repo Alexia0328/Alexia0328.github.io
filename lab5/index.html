@@ -1,0 +1,429 @@
+
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>NO.8 HAIR SALON</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="title-background p-3 my-3 border text-white">
+        <br><br>
+        <h1 class="font-italic">Welcome to NO.8 HAIR STUDIO </h1>
+        <br><br>
+        <h3 class="font-italic">&nbsp;&nbsp;&nbsp;&nbsp;The most fashionable hairstyles</h3>
+    </div>
+
+    <!-- form uottawa.ca -->
+    <div id="main-content-wrapper" class="uol--page-container uol--clearfix">
+        <main id="main-content" class="uol--clearfix">
+            <div class="uos--full-width" id="uottawa_covid19">        
+                <div style="padding: 20px; background-color: white; margin: auto;" class="uos--standard-width--always uos--standard-width">          
+                    <img src="https://www.uottawa.ca/coronavirus/sites/www.uottawa.ca.coronavirus/files/infoicon-35x35.png" alt="info" style="width: 35px; height: 35px; float: left; margin-top: -8px; ">
+                    <span style="margin-left: 20px; margin-top: 12px; " class="font-italic">
+                        <strong><a href="https://www.uottawa.ca/coronavirus/en" style="color:red;font-size:1rem;">NO.8 HAIR SALON in response to COVID-19 change</a>          
+                        </strong>
+                    </span> 
+                    <br><br>
+                    <div class="alert alert-warning alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Warning!</strong> Please wear a mask when entering the shop. We will take the temperature of every customer!
+                    </div>      
+                </div>     
+            </div>
+        </main>
+    </div>      
+
+
+
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <div class="row p-3">
+        <div class="col-sm-3 pl-5">
+            <button id="Service" type="Service" class="font-italic"><a href= "#us">About US</a></button>
+        </div>
+        <div class="col-sm-3 pl-5">
+            <button id="Service" type="Service" class="font-italic"><a href= "#service">Service</a></button>
+        </div>
+        <div class="col-sm-3 pl-5">
+            <button id="Calendar" type="Calendar" class="font-italic"><a href= "#calendar">Calendar</a></button></button>
+        </div>
+        <div class="col-sm-3 pl-5">
+            <button id="Where" type="Where" class="font-italic"><a href= "#find">Where to find us</a></button></button>
+        </div>
+    </div>
+
+
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <div id="us" class="aboutus p-3 my-3 border text-white">
+        <h3 class="font-italic">About NO.8 Hair Salon</h3>
+        <p>Since the opening of NO.8 Hair Salon in 2012,</p>
+        <p>we have been focusing on fashion hair salon, which has been well received by our customers. </p>
+        <p>We have three good barbers and other staff. </p>
+        <p class="text-uppercase">NO.8 Hair Salon is at your service.</p>
+    </div>
+    <br>
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div id="service" class="container">
+        <br>
+        <h2 class="font-italic">SERVICES &nbsp;<img src="images/service.png" alt="service" width="40px"></h2> 
+        <p>Here is a list of services offered</p>            
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="font-italic">Service</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="font-italic">Haircut</td>
+                <td>Wash, cut and style. Price varies depending on hairdressers. </td>
+                <td>CA$45.00 - CA$75.00</td>
+            </tr>
+            <tr>
+                <td class="font-italic">Blowdry + Curls</td>
+                <td>Wash and blowdry, plus curls. Price varies depending on hairdressers. </td>
+                <td>CA$15.00 - CA$40.00</td>
+            </tr>
+            <tr>
+                <td class="font-italic">Coloring</td>
+                <td>Wash and coloring.Price varies depending on hairdressers.</td>
+                <td>CA$75.00 - CA$120.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+
+    <div class="container">
+        <br>
+        <h2 class="font-italic">Our designs &nbsp;<img src="images/design.png" alt="design" width="40px"></h2>
+        <br>
+        <div class="card-columns">
+            <div style="width:200px">
+                <img class="card-img-top" src="images/shorthair.png" alt="short hair" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Short hair</h4>
+                </div>
+            </div>
+            <div style="width:200px">
+                <img class="card-img-top" src="images/mediumhair.png" alt="medium hair" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Medium hair</h4>
+                </div>
+            </div>
+            <div style="width:200px">
+                <img class="card-img-top" src="images/longhair.png" alt="long hair" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Long hair</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div id="service" class="container p-3">
+        <br>
+        <h2 class="font-italic">Meet our hairdressers &nbsp;<img src="images/stylist.png" alt="stylist" width="40px"></h2>
+        <br>
+        <div class="card-columns">
+            <div class="card bg-warning" style="width:250px">
+                <img class="card-img-top" src="images/hairdressers1.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Kelly</h4>
+                    <p class="card-text">Kelly has been cutting hair for 1 years. She is good at designing women's hairstyles.</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See service price</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Haircut CA$60.00</p>
+                        <p>Blowdry + Curls CA$25.00</p>
+                        <p>Coloring CA$75.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-warning" style="width:250px">
+                <img class="card-img-top" src="images/hairdressers2.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Andy</h4>
+                    <p class="card-text">Andy has been cutting hair for 10 years. He is good at designing men's hairstyles and Coloring.</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See service price</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Haircut CA$75.00</p>
+                        <p>Blowdry + Curls CA$15.00</p>
+                        <p>Coloring CA$90.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-warning" style="width:250px">
+                <img class="card-img-top" src="images/hairdressers3.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Jessi</h4>
+                    <p class="card-text">Jessi has been cutting hair for 4 years. She is good at dyeing hair, styling and coloring.</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See service price</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Haircut CA$45.00</p>
+                        <p>Blowdry + Curls CA$45.00</p>
+                        <p>Coloring CA$120.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-columns">               
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#book1" style="width: 250px">Book Now</button>
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#book2" style="width: 250px">Book Now</button>
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#book3" style="width: 250px">Book Now</button>
+        </div>
+    </div>
+        <!-- Modal -->
+        <div class="modal fade" id="book1" role="dialog">
+            <div class="modal-dialog">  
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="other">
+                        <h2>Kelly will be at your service.</h2>
+                        <br>
+                        <img src="images/service.png" alt="service" width="40px">
+                        <h4>Choose services</h4>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">&nbsp;Haircut CA$60.00</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">&nbsp;Blowdry + Curls CA$25.00</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">&nbsp;Coloring CA$75.00</label>
+                          </div>
+                        </form>
+                        <br>
+                        <img src="images/calendar.png" alt="calendar" width="40px">
+                        <h4>Choose a date</h4>
+                        <input class="form-control" type="text" id="dateInput1">
+                        <br>
+                            <div class="md-form mb-5">
+                                <img src="images/person.png" alt="person" width="40px">
+                                <input type="text" class="form-control validate" placeholder="Enter your Name"> 
+                                
+
+                                <img src="images/phone.png" alt="phone" width="40px">
+                                <input id="phone1" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+
+                                
+                                <img src="images/card.png" alt="card" width="40px">
+                                <input id="debit1" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+
+                            </div>
+                </div>
+                <button type="button" style="width: 100px; background-color:beige; border-radius: 10px; border-color:#e7dfd5 ;margin: center;">Submit</button>
+                <br><br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>     
+        </div>
+        </div> 
+        </div> 
+
+        <div class="modal fade" id="book2" role="dialog">
+            <div class="modal-dialog">  
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="other">
+                        <h2>Andy will be at your service.</h2>
+                        <br>
+                        <img src="images/service.png" alt="service" width="40px">
+                        <h4>Choose services</h4>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">&nbsp;Haircut CA$75.00</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">&nbsp;Blowdry + Curls CA$15.00</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">&nbsp;Coloring CA$90.00</label>
+                          </div>
+                        </form>
+                        <br>
+                        <img src="images/calendar.png" alt="calendar" width="40px">
+                        <h4>Choose a date</h4>
+                        <input class="form-control" type="text" id="dateInput2">
+                        <br>
+                            <div class="md-form mb-5">
+                                <img src="images/person.png" alt="person" width="40px">
+                                <input type="text" class="form-control validate" placeholder="Enter your Name"> 
+                                
+
+                                <img src="images/phone.png" alt="phone" width="40px">
+                                <input id="phone2" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+
+                                
+                                <img src="images/card.png" alt="card" width="40px">
+                                <input id="debit2" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+
+                            </div>
+                </div>
+                <button type="button" style="width: 100px; background-color:beige; border-radius: 10px; border-color:#e7dfd5 ;margin: auto;">Submit</button>
+                <br><br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>     
+        </div>
+        </div> 
+        </div>  
+
+        <div class="modal fade" id="book3" role="dialog">
+            <div class="modal-dialog">  
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="other">
+                        <h2>Jessi will be at your service.</h2>
+                        <br>
+                        <img src="images/service.png" alt="service" width="40px">
+                        <h4>Choose services</h4>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">&nbsp;Haircut CA$45.00</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">&nbsp;Blowdry + Curls CA$45.00</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">&nbsp;Coloring CA$120.00</label>
+                          </div>
+                        </form>
+                        <br>
+                        <img src="images/calendar.png" alt="calendar" width="40px">
+                        <h4>Choose a date</h4>
+                        <input class="form-control" type="text" id="dateInput3">
+                        <br>
+                            <div class="md-form mb-5">
+                                <img src="images/person.png" alt="person" width="40px">
+                                <input type="text" class="form-control validate" placeholder="Enter your Name"> 
+                                
+
+                                <img src="images/phone.png" alt="phone" width="40px">
+                                <input id="phone3" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+
+                                
+                                <img src="images/card.png" alt="card" width="40px">
+                                <input id="debit3" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+
+                            </div>
+                </div>
+                <button type="button" style="width: 100px; background-color:beige; border-radius: 10px; border-color:#e7dfd5 ;margin: auto;">Submit</button>
+                <br><br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>     
+        </div>
+        </div> 
+        </div> 
+
+
+<br><br>
+
+<footer>
+    <div id="find" class="footer">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <hr class="light">    
+                    <img src="images/Scissors.png" alt="footer logo" width="20px" height="20px">
+                <hr class="light">
+                <p>819-830-0328</p>
+                <p>Alexiah0328@gmail.com</p>
+                <p>265 Laurier Ave E</p>
+                <p>Ottawa, ON, K1N, 6P7</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5 id="calendar">Our Hours</h5>
+                <hr class="light">
+                <p>Monday - Friday: 10am - 8pm</p>
+                <p>Saturday: 12pm - 9pm</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Avalible Store</h5>
+                <hr class ="light">
+                <p>Calgary, AB</p>
+                <p>Toronto, ON</p>
+                <p>Montreal, QC</p>
+                <p>Ottawa, ON</p>
+                <p>Vancouver, BC</p>
+            </div>
+            <div class="col-12">
+                <hr class="light">
+                <h3 class="font-italic">NO.8 HAIR SALON</h3>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
