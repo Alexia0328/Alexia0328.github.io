@@ -1,0 +1,51 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+
+    <h2>Name</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].name %> :  <%= results[0][i].count %></li>
+    <% } %> 
+    </ul>
+
+    <h2>Yes or No</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].yesorno %> :  <%= results[1][i].count %></li>
+    <% } %>  
+    </ul>
+
+    <h2>Clear</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].clear %> :  <%= results[2][i].count %></li>
+    <% } %>  
+    </ul>
+
+    <h2>Highlight</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].highlight %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>Best</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].best %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>Comments</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].comment %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+</body>
+</html>

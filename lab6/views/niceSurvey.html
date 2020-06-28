@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>  
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  </head>
+  
+  <body>
+
+	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
+    <div style="text-align: center;">
+      <img src="https://image.flaticon.com/icons/png/512/1169/1169549.png" alt="survey image" width="100" height="100">
+      <br>
+      <h1 class="text-center">Survey</h1>
+      <h3 class="text-center">about QuelqueChose Macaron</h3>
+      <br><br>
+      <a href="https://quelque-chose.ca/">
+      <img src="/assets/image/website_image.png" alt="website image" width="700" height="400">
+      </a>
+    </div>
+    <br>
+    <br>
+
+    <form>
+      <h2 style="color: #fbd46d;"> Your information </h2>
+      Name:&nbsp;&nbsp;<input type="text" name="name" placeholder="Firstname, Lastname" required />
+      <br>
+      <br>
+      <h2 style="color: #fbd46d;">Does QuelqueChose's website appeal to you?</h2>
+      I choose:<br>
+      <input type="radio" name="yesorno" value="Yes"> Yes
+      <br>
+      <input type="radio" name="yesorno" value="No"> No
+      <br>
+      <br>
+      <h2 style="color: #fbd46d;">Do you think the information on QuelqueChose's website is clear?</h2>
+            <input id="niveau1" type="radio" name="clear" value="Very Confusing" /> Very Confusing
+            <input id="niveau2" type="radio" name="clear" value="Confusing" /> Confusing
+            <input id="niveau3" type="radio" name="clear" value="Neutral" /> Neutral
+            <input id="niveau4" type="radio" name="clear" value="Clear" /> Clear
+            <input id="niveau5" type="radio" name="clear" value="Very clear" /> Very clear
+      <br>
+      <br>
+      <h2 style="color: #fbd46d;"> Which information on this website do you think should highlight more?</h2>
+	    I choose:<br>
+      <input type="checkbox" name="highlight" value="Address"> Address
+      <br>
+      <input type="checkbox" name="highlight" value="Product"> Product
+      <br>
+      <input type="checkbox" name="highlight" value="Service"> Service
+      <br>
+      <input type="checkbox" name="highlight" value="Other"> Other
+      <br>
+      <br>
+      <h2 style="color: #fbd46d;">Which of the following do you think this website does best?</h2>
+      I choose:<br>
+      <select name="best">
+        <option value="select" selected="selected">--Select--</option>
+        <option value="Color matching">Color matching</option>
+        <option value="Clear information">Clear information</option>
+        <option value="Comprehensive content">Comprehensive content</option>
+        <option value="Good visual effect">Good visual effect</option>
+        <option value="None">None</option>
+      </select>
+      <br>
+      <br>
+      <h2 style="color: #fbd46d;">Comments:</h2>
+      <input type="text" name="comment" required />
+      <br>
+      <br>
+      <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+      <p id="thanks"></p>
+    </form>
+    </div>
+	<script src="/assets/action.js"></script>
+  </body>
+</html> 
