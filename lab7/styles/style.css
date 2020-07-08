@@ -1,0 +1,116 @@
+ /* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+h1 {
+  font-family: "Italie", Timcol-sm-3es, serif;
+  text-shadow: 3px 3px 1px black; 
+}
+
+h2 {
+  font-family: "Italie", Times, serif;
+}
+
+h3 {
+  font-family: "Italie", Times, serif;
+  color:black;
+}
+
+h4 {
+  font-family: "Italie", Times, serif;
+}
+
+p {
+  color: white;
+}
+
+body{
+  color: white;
+}
+
+a{
+  color: white;
+}
+
+.title-background{
+  background-image: url("../images/tennisbg.jpg");
+  height: 500px;
+  border: 3px;
+  margin: auto;
+}
+
+.row{
+  margin: auto;
+}
+
+.row button{
+  background-color: #34699a;
+  padding: 14px 16px;
+  border: 1px beige;
+}
+
+.col-sm-3{
+  background-color: #34699a;
+  border: 1px beige;
+}
+
+.aboutus{
+  background-color: #639a67;
+  border: 1px beige;
+  width:1400px;
+  margin: auto;
+}
+
+.container{
+  background-color: #639a67;
+  border-color: white;
+}
+
+.table{
+  background-color: #639a67;
+  border-color: white;
+  table-layout: white;
+}
+
+.footer {
+  background-color: #34699a;
+  border: 1px beige;
+  margin: auto;
+}
+
+.choice{
+  color:grey;
+}
+
+
+.container button{
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.book {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #0779e4;
+}
+
+.book:hover {
+    background-color: #0779e4;
+    color: white;
+}
+
+
+
+
+.error {
+  background-color: red;
+  color : yellow;
+}
+
+
+.showInput {
+  background-color: beige;
+}
+
