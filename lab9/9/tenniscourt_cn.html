@@ -1,0 +1,517 @@
+
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="cn">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Club de Tennis -- A vos raquettes!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+    
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body style="background: rgb(245, 245, 245)">
+    
+    <!-- Navigation bar-->
+    <div class="navbar">
+        <a href="welcome_cn.html" class="navbar_item navbar_button" style="font-family: 'Lobster', cursive;">A vos raquettes</a>
+        <a href="tenniscourt_cn.html" class="navbar_item navbar_button" style="float: right;">网球场</a>
+        <a href="courses_cn.html" class="navbar_item navbar_button" style="float: right;">教练 & 课程</a>
+        <a href="communication_cn.html" class="navbar_item navbar_button" style="float: right;">交流</a>
+        <div class="dropdown">
+            <button class="dropbtn"><img src="images/lang.png" alt="language" width="30px" height=30px"">&nbsp;&nbsp;切换语言</button>
+            <div class="dropdown-content">
+                <a href="tenniscourt.html">中文</a>
+                <a href="tenniscourt_cn.html">English</a>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div id="tennis" class="container">
+        <br>
+        <h2 class="font-italic">网球场 &nbsp;<img src="images/icon1.png" alt="service" width="40px"></h2> 
+        <p>这是我们的网球场清单</p>            
+        <table class="table">
+            <thead>
+            <tr>
+                <th>地址</th>
+                <th>白天价格</th>
+                <th>夜晚价格</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>75 Laurier Ave E, Ottawa, ON K1N 6N5 </td>
+                <td>CA$30 per hour</td>
+                <td>CA$25 per hour</td>
+            </tr>
+            <tr>
+                <td>100 Frontier Path Pvt, Ottawa, ON K1J 0C5</td>
+                <td>CA$30 per hour</td>
+                <td>CA$20 per hour</td>
+            </tr>
+            <tr>
+                <td>1100 Boulevard Maloney O, Gatineau, QC J8T 6G3</td>
+                <td>CA$25 per hour</td>
+                <td>CA$15 per hour</td>
+            </tr>
+            <tr>
+                <td>391 St Clements Ave, Toronto, ON M5N 1M2</td>
+                <td>CA$50 per hour</td>
+                <td>CA$30 per hour</td>
+            </tr>
+            <tr>
+                <td>900 York Mills Rd, Toronto, ON M3B 3H2</td>
+                <td>CA$30 per hour</td>
+                <td>CA$30 per hour</td>
+            </tr>
+            </tbody>
+        </table>
+        <br><br>
+    </div>
+    <br><br>
+
+
+    <div id="calendar" class="container p-5">
+
+        <div class="col-sm-10 pl-5" id="tc"> 
+            <h4 class="font-italic">以下是所有可用的网球场</h4>
+            <p class="font-italic">如果您想要预定一个网球场, 请点击您想要预定的网球场后的“现在预定”的按钮</p>
+            <br>
+            <div class="row p-5">
+            <div class="col-sm-6 pl-5">
+                <img src="images/tc1.jpg" alt="stylist" width="250px"><br><br>
+                <p>城市:&nbsp;&nbsp;Ottawa</p>
+                <p>地址:&nbsp;&nbsp;75 Laurier Ave E, K1N 6N5 </p>
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#bookc1" style="width: 250px">Book Now</button>
+            </div>
+            <div class="col-sm-6 pl-5">
+                <img src="images/tc2.jpg" alt="stylist" width="250px"><br><br>
+                <p>城市:&nbsp;&nbsp;Ottawa</p>
+                <p>地址:&nbsp;&nbsp;100 Frontier Pvt, K1J 0C5</p>
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#bookc2" style="width: 250px">Book Now</button><br>
+            </div>
+            <div class="col-sm-6 pl-5">
+                <br><br>
+                <img src="images/tc3.jpg" alt="stylist" width="250px"><br><br>
+                <p>城市:&nbsp;&nbsp;Gatineau</p>
+                <p>地址:&nbsp;&nbsp;1100 Boulevard Maloney, J8T 6G3</p>
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#bookc3" style="width: 250px">Book Now</button>
+            </div>
+            <div class="col-sm-6 pl-5">
+                <br><br>
+                <img src="images/tc4.jpg" alt="stylist" width="250px"><br><br>
+                <p>城市:&nbsp;&nbsp;Toronto</p>
+                <p>地址:&nbsp;&nbsp;391 St Clements Ave, M5N 1M2</p>
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#bookc4" style="width: 250px">Book Now</button>
+            </div>
+            <div class="col-sm-6 pl-5">
+                <br><br>
+                <img src="images/tc5.jpg" alt="stylist" width="250px"><br><br>
+                <p>城市:&nbsp;&nbsp;Toronto</p>
+                <p>地址:&nbsp;&nbsp;900 York Mills Rd, ON M3B 3H2</p>
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#bookc5" style="width: 250px">Book Now</button><br>
+            </div>
+            </div>
+        </div>
+        <br>
+                <!-- Modal -->
+                <div class="modal fade" id="bookc1" role="dialog">
+                    <div class="modal-dialog">  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="other">
+                                <h3>您已经选择了这个网球场 <img src="images/icon1.png" alt="service" width="40px"></h3>
+                                <img src="images/calendar.png" alt="calendar" width="40px">
+                                <h3>选择日期</h3>
+                                <input class="form-control" type="text" id="dateInput4">
+                                <br>
+                                    <div class="md-form mb-5">
+                                        <img src="images/person.png" alt="person" width="40px">
+                                        <input type="text" class="form-control validate" placeholder="输入您的名字"> 
+                                        
+        
+                                        <img src="images/phone.png" alt="phone" width="40px">
+                                        <input id="phone1" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+        
+                                        
+                                        <img src="images/card.png" alt="card" width="40px">
+                                        <input id="debit1" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+        
+                                    </div>
+                        </div>
+            <div id="confirmCourt1"></div>
+
+            <script type="text/babel">
+
+            class ConfirmCourt1 extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value: '点击此处确认提交预定和个人信息!', color:"black"};
+                this.handleChange = this.handleChange.bind(this);
+            }
+            
+            handleChange(event) {
+                this.setState({value: '已提交!'})
+            }
+            render() {
+                var value = this.state.value;
+                return <div>
+                        <button onClick={this.handleChange}>提交!</button>
+                        <h6>{value}</h6>
+                    </div>;
+            }
+            }
+            ReactDOM.render(
+            <ConfirmCourt1 />, document.getElementById('confirmCourt1')
+            );
+            </script>
+            <br><br>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>     
+    </div>
+    </div> 
+    </div>  
+        
+                <div class="modal fade" id="bookc2" role="dialog">
+                    <div class="modal-dialog">  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="other">
+                                <h3>您已经选择这个网球场。 <img src="images/icon1.png" alt="service" width="40px"></h3>
+                                <img src="images/calendar.png" alt="calendar" width="40px">
+                                <h3>选择日期</h3>
+                                <input class="form-control" type="text" id="dateInput5">
+                                <br>
+                                <div class="md-form mb-5">
+                                    <img src="images/person.png" alt="person" width="40px">
+                                    <input type="text" class="form-control validate" placeholder="输入您的名字""> 
+                                    
+    
+                                    <img src="images/phone.png" alt="phone" width="40px">
+                                    <input id="phone1" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+    
+                                    
+                                    <img src="images/card.png" alt="card" width="40px">
+                                    <input id="debit1" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+    
+                                </div>
+                        </div>
+                        <div id="confirmCourt2"></div>
+
+                        <script type="text/babel">
+
+                        class ConfirmCourt2 extends React.Component {
+                        constructor(props) {
+                            super(props);
+                            this.state = {value: '点击此处确认提交预定和个人信息！', color:"black"};
+                            this.handleChange = this.handleChange.bind(this);
+                        }
+                        
+                        handleChange(event) {
+                            this.setState({value: '已提交!'})
+                        }
+                        render() {
+                            var value = this.state.value;
+                            return <div>
+                                    <button onClick={this.handleChange}>提交!</button>
+                                    <h6>{value}</h6>
+                                </div>;
+                        }
+                        }
+                        ReactDOM.render(
+                        <ConfirmCourt2 />, document.getElementById('confirmCourt2')
+                        );
+                        </script>
+                        <br><br>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>     
+                </div>
+                </div> 
+                </div>  
+        
+                <div class="modal fade" id="bookc3" role="dialog">
+                    <div class="modal-dialog">  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="other">
+                                <h3>您已经选择这个网球场。 <img src="images/icon1.png" alt="service" width="40px"></h3>
+                                <img src="images/calendar.png" alt="calendar" width="40px">
+                                <h3>选择日期</h3>
+                                <input class="form-control" type="text" id="dateInput6">
+                                <br>
+                                    <div class="md-form mb-5">
+                                        <img src="images/person.png" alt="person" width="40px">
+                                        <input type="text" class="form-control validate" placeholder="输入您的名字""> 
+                                        
+        
+                                        <img src="images/phone.png" alt="phone" width="40px">
+                                        <input id="phone1" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+        
+                                        
+                                        <img src="images/card.png" alt="card" width="40px">
+                                        <input id="debit1" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+        
+                                    </div>
+                        </div>
+                        <div id="confirmCourt3"></div>
+
+            <script type="text/babel">
+
+            class ConfirmCourt3 extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value: '点击此处确认提交预定和个人信息！', color:"black"};
+                this.handleChange = this.handleChange.bind(this);
+            }
+            
+            handleChange(event) {
+                this.setState({value: '已提交!'})
+            }
+            render() {
+                var value = this.state.value;
+                return <div>
+                        <button onClick={this.handleChange}>提交!</button>
+                        <h6>{value}</h6>
+                    </div>;
+            }
+            }
+            ReactDOM.render(
+            <ConfirmCourt3 />, document.getElementById('confirmCourt3')
+            );
+            </script>
+            <br><br>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>     
+    </div>
+    </div> 
+    </div>  
+        
+                <div class="modal fade" id="bookc4" role="dialog">
+                    <div class="modal-dialog">  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="other">
+                                <h3>您已经选择这个网球场。 <img src="images/icon1.png" alt="service" width="40px"></h3>
+                                <img src="images/calendar.png" alt="calendar" width="40px">
+                                <h3>选择日期</h3>
+                                <input class="form-control" type="text" id="dateInput7">
+                                <br>
+                                    <div class="md-form mb-5">
+                                        <img src="images/person.png" alt="person" width="40px">
+                                        <input type="text" class="form-control validate" placeholder="输入名字"> 
+                                        
+        
+                                        <img src="images/phone.png" alt="phone" width="40px">
+                                        <input id="phone1" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+        
+                                        
+                                        <img src="images/card.png" alt="card" width="40px">
+                                        <input id="debit1" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+        
+                                    </div>
+                        </div>
+                        <div id="confirmCourt4"></div>
+
+            <script type="text/babel">
+
+            class ConfirmCourt4 extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value: '点击此处确认提交预定和个人信息！', color:"black"};
+                this.handleChange = this.handleChange.bind(this);
+            }
+            
+            handleChange(event) {
+                this.setState({value: '已提交!'})
+            }
+            render() {
+                var value = this.state.value;
+                return <div>
+                        <button onClick={this.handleChange}>提交!</button>
+                        <h6>{value}</h6>
+                    </div>;
+            }
+            }
+            ReactDOM.render(
+            <ConfirmCourt4 />, document.getElementById('confirmCourt4')
+            );
+            </script>
+            <br><br>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>     
+    </div>
+    </div> 
+    </div>  
+        
+                <div class="modal fade" id="bookc5" role="dialog">
+                    <div class="modal-dialog">  
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="other">
+                                <h3>您已经选择了这个网球场。 <img src="images/icon1.png" alt="service" width="40px"></h3>
+                                <img src="images/calendar.png" alt="calendar" width="40px">
+                                <h3>选择日期</h3>
+                                <input class="form-control" type="text" id="dateInput8">
+                                <br>
+                                    <div class="md-form mb-5">
+                                        <img src="images/person.png" alt="person" width="40px">
+                                        <input type="text" class="form-control validate" placeholder="输入名字"> 
+                                        
+        
+                                        <img src="images/phone.png" alt="phone" width="40px">
+                                        <input id="phone1" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+        
+                                        
+                                        <img src="images/card.png" alt="card" width="40px">
+                                        <input id="debit1" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+        
+                                    </div>
+                        </div>
+                        <div id="confirmCourt5"></div>
+
+            <script type="text/babel">
+
+            class ConfirmCourt5 extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value: '点击此处确认提交预定和个人信息！', color:"black"};
+                this.handleChange = this.handleChange.bind(this);
+            }
+            
+            handleChange(event) {
+                this.setState({value: '已提交!'})
+            }
+            render() {
+                var value = this.state.value;
+                return <div>
+                        <button onClick={this.handleChange}>提交!</button>
+                        <h6>{value}</h6>
+                    </div>;
+            }
+            }
+            ReactDOM.render(
+            <ConfirmCourt5 />, document.getElementById('confirmCourt5')
+            );
+            </script>
+            <br><br>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>     
+    </div>
+    </div> 
+    </div>  
+    </div>
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <div id="find" class="footer">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <hr class="light">    
+                <h5>信息</h5>
+                <hr class="light">
+                <p>819-830-0328</p>
+                <p>Alexiah0328@gmail.com</p>
+                <p>265 Laurier Ave E</p>
+                <p>Ottawa, ON, K1N, 6P7</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5 id="calendar">营业时间</h5>
+                <hr class="light">
+                <p>周一 - 周五: 10am - 8pm</p>
+                <p>周末: 12pm - 9pm</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>现有地址</h5>
+                <hr class ="light">
+                <p>Toronto, ON</p>
+                <p>Gatineau, QC</p>
+                <p>Ottawa, ON</p>
+            </div>
+            <div class="col-12">
+                <hr class="light">
+                <h2 class="font-italic">A VOS RAQUETTES 网球俱乐部</h2>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

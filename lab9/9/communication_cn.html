@@ -1,0 +1,209 @@
+
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="cn">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Club de Tennis -- A vos raquettes!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+    
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body style="background: rgb(245, 245, 245)">
+    
+    <!-- Navigation bar-->
+    <div class="navbar">
+        <a href="welcome_cn.html" class="navbar_item navbar_button" style="font-family: 'Lobster', cursive;">A vos raquettes</a>
+        <a href="tenniscourt_cn.html" class="navbar_item navbar_button" style="float: right;">网球场</a>
+        <a href="courses_cn.html" class="navbar_item navbar_button" style="float: right;">教练 & 课程</a>
+        <a href="communication_cn.html" class="navbar_item navbar_button" style="float: right;">交流</a>
+        <div class="dropdown">
+            <button class="dropbtn"><img src="images/lang.png" alt="language" width="30px" height=30px"">&nbsp;&nbsp;切换语言</button>
+            <div class="dropdown-content">
+                <a href="communication.html">English</a>
+                <a href="communication_cn.html">中文</a>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <div id="communication" class="container">
+        <br>
+        <h2 class="font-italic">和其他会员交流吧！</h2>
+        <p class="font-italic">您想要和其他会员一起玩单打或双打吗？</p>
+        <p class="font-italic">这里是一个也想要寻找一起打网球的伙伴的会员清单。</p>
+        <p class="font-italic">如果您对他们感兴趣, 请点击“聊天”按钮与他们联系。</p>
+        <br><br>
+        <div id="example9"></div>
+
+            <script type="text/babel">
+            class Level extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value: 'None'};
+
+                this.handleChange = this.handleChange.bind(this);
+                this.handleSubmit = this.handleSubmit.bind(this);
+            }
+
+            handleChange(event) {
+                this.setState({value: event.target.value});
+            }
+
+            handleSubmit(event) {
+                alert('Your level of tennis is ' + this.state.value);
+                event.preventDefault();
+            }
+
+            render() {
+                return (
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                    <h4>我的网球水平 :</h4>
+                    <select value={this.state.value} onChange={this.handleChange}>
+                        <option value="select">----请选择----</option>
+                        <option value="basic">基础</option>
+                        <option value="medium">中级</option>
+                        <option value="high">高级</option>
+                    </select>
+                    </label>
+                    <p></p>
+                    <button type="submit" value="Submit">提交!</button>
+                </form>
+                );
+            }
+            }
+
+            ReactDOM.render(
+            <Level />,
+            document.getElementById('example9')
+            );
+            </script>
+
+            <br><br>
+        <table class="table">
+        <thead>
+        <tr>
+            <th>名字</th>
+            <th>单打/双打</th>
+            <th>等级</th>
+            <th>和他/她联系</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>哈利·波特</td>
+            <td>双打</td>
+            <td>基础</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">聊天</button></td>
+        </tr>
+        <tr>
+            <td>赫敏·格兰杰</td>
+            <td>单打</td>
+            <td>高级</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">聊天</button></td>
+        </tr>
+        <tr>
+            <td>德拉·古马尔福</td>
+            <td>单打</td>
+            <td>中级</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">聊天</button></td>
+        </tr>
+        <tr>
+            <td>罗恩·韦斯林</td>
+            <td>双打</td>
+            <td>中级</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">聊天</button></td>
+        </tr>
+        <tr>
+            <td>卢娜·洛夫古德</td>
+            <td>双打</td>
+            <td>高级</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">聊天</button></td>
+        </tr>
+        <tr>
+            <td>阿不思.邓布利多</td>
+            <td>单打</td>
+            <td>基础</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">聊天</button></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    </div>
+
+
+    <br><br>
+
+    
+<footer>
+    <div id="find" class="footer">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <hr class="light">    
+                <h5>信息</h5>
+                <hr class="light">
+                <p>819-830-0328</p>
+                <p>Alexiah0328@gmail.com</p>
+                <p>265 Laurier Ave E</p>
+                <p>Ottawa, ON, K1N, 6P7</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5 id="calendar">营业时间</h5>
+                <hr class="light">
+                <p>周一 - 周五: 10am - 8pm</p>
+                <p>周末: 12pm - 9pm</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>现有地址</h5>
+                <hr class ="light">
+                <p>Toronto, ON</p>
+                <p>Gatineau, QC</p>
+                <p>Ottawa, ON</p>
+            </div>
+            <div class="col-12">
+                <hr class="light">
+                <h2 class="font-italic">A VOS RAQUETTES 网球俱乐部</h2>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

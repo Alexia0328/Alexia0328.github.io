@@ -1,0 +1,186 @@
+
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="cn">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Club de Tennis -- A vos raquettes!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+    
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body style="background: rgb(245, 245, 245)">
+    
+    <!-- Navigation bar-->
+    <div class="navbar">
+        <a href="welcome_cn.html" class="navbar_item navbar_button" style="font-family: 'Lobster', cursive;">A vos raquettes</a>
+        <a href="tenniscourt_cn.html" class="navbar_item navbar_button" style="float: right;">网球场</a>
+        <a href="courses_cn.html" class="navbar_item navbar_button" style="float: right;">教练 & 课程</a>
+        <a href="communication_cn.html" class="navbar_item navbar_button" style="float: right;">交流</a>
+        <div class="dropdown">
+            <button class="dropbtn"><img src="images/lang.png" alt="language" width="30px" height=30px"">&nbsp;&nbsp;切换语言</button>
+            <div class="dropdown-content">
+                <a href="welcome.html">English</a>
+                <a href="welcome_cn.html">中文</a>
+            </div>
+        </div>
+    </div>
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="title-background p-3 my-3 border text-white">
+        <br><br><br><br><br>
+        <h1 class="font-italic" style="margin: center;">欢迎来到 A VOS RAQUETTES 网球俱乐部！</h1>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <h2 class="font-italic">&nbsp;&nbsp;&nbsp;&nbsp;最专业最有趣的网球俱乐部！</h2>   
+    </div>
+
+    <!-- form uottawa.ca -->
+    <div id="main-content-wrapper" class="uol--page-container uol--clearfix">
+        <main id="main-content" class="uol--clearfix">
+            <div class="uos--full-width" id="uottawa_covid19">        
+                <div style="padding: 20px; background-color: white; margin: auto;" class="uos--standard-width--always uos--standard-width">          
+                    <img src="https://www.uottawa.ca/coronavirus/sites/www.uottawa.ca.coronavirus/files/infoicon-35x35.png" alt="info" style="width: 35px; height: 35px; float: left; margin-top: -8px; ">
+                    <span style="margin-left: 20px; margin-top: 12px; " class="font-italic">
+                        <strong><a href="https://www.uottawa.ca/coronavirus/en" style="color:red;font-size:1rem;">A VOS RAQUETTES 网球俱乐部关于COVID-19的安排</a>          
+                        </strong>
+                    </span> 
+                    <br><br>
+                    <div class="alert alert-warning alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>警告!</strong> 我们会测量每一个顾客的体温!
+                    </div>      
+                </div>     
+            </div>
+        </main>
+    </div>      
+
+    
+    
+    <div>
+        
+        <form class="search_form" style="margin-top: 40px">
+            <input class="search_form_input" type="text" placeholder="查找关键词..." name="search">
+            <button class="search_form_button" type="submit">
+            <img class="search_icon" src="./images/active-search-symbol.svg" alt="Search Icon">
+            </button>
+        <br><br><br><br>
+    </div>
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <div id="us" class="aboutus p-3 my-3 border text-white">
+        <h2 class="font-italic">关于 A VOS RAQUETTES 网球俱乐部</h2>
+        <br>
+        <p>这是一个成立于2010年的网球俱乐部，</p>
+        <p>我们拥有很多专业的网球场，也有具有教学经验的教练们。</p>
+        <p>您可以<a href="tenniscourt_cn.html">预约网球场</a>和您的家人朋友们一起享受打网球的乐趣。</p>
+        <p>您也可以<a href="courses_cn.html">预约经验丰富的教练</a>上专业网球课程。</p>
+        <div id="shine"></div>
+        <script type="text/babel">
+            class Shine extends React.Component {
+             
+              constructor(props) {
+                  super(props);
+                  this.state = {opacity: 1.0};
+              }
+             
+              componentDidMount() {
+                this.timer = setInterval(function () {
+                  var opacity = this.state.opacity;
+                  opacity -= .05;
+                  if (opacity < 0.1) {
+                    opacity = 1.0;
+                  }
+                  this.setState({
+                    opacity: opacity
+                  });
+                }.bind(this), 100);
+              }
+             
+              render () {
+                return (
+                  <div style={{opacity: this.state.opacity}}>
+                    A VOS RAQUETTES 网球俱乐部竭诚为您服务 {this.props.name}
+                  </div>
+                );
+              }
+            }
+
+            ReactDOM.render(<Shine />, document.getElementById('shine'));
+            </script>
+    </div>
+    <br><br><br><br>
+
+<footer>
+    <div id="find" class="footer">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <hr class="light">    
+                <h5>信息</h5>
+                <hr class="light">
+                <p>819-830-0328</p>
+                <p>Alexiah0328@gmail.com</p>
+                <p>265 Laurier Ave E</p>
+                <p>Ottawa, ON, K1N, 6P7</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5 id="calendar">营业时间</h5>
+                <hr class="light">
+                <p>周一 - 周五: 10am - 8pm</p>
+                <p>周末: 12pm - 9pm</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>现有地址</h5>
+                <hr class ="light">
+                <p>Toronto, ON</p>
+                <p>Gatineau, QC</p>
+                <p>Ottawa, ON</p>
+            </div>
+            <div class="col-12">
+                <hr class="light">
+                <h2 class="font-italic">A VOS RAQUETTES 网球俱乐部</h2>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

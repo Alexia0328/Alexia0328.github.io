@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Courses</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+    
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="welcome.html" class="navbar_item navbar_button" style="font-family: 'Lobster', cursive;">A vos raquettes</a>
+        <a href="tenniscourt.html" class="navbar_item navbar_button" style="float: right;">Tennis Court</a>
+        <a href="courses.html" class="navbar_item navbar_button" style="float: right;">Coaches & Courses</a>
+        <a href="communication.html" class="navbar_item navbar_button" style="float: right;">Communication</a>
+        <div class="dropdown">
+            <button class="dropbtn"><img src="images/lang.png" alt="language" width="30px" height=30px"">&nbsp;Language</button>
+            <div class="dropdown-content">
+                <a href="courses.html">English</a>
+                <a href="courses_cn.html">中文</a>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <div class="container" id="coach">
+        <br>
+        <h2 class="font-italic">Meet our coaches &nbsp;<img src="images/coach.png" alt="stylist" width="50px"></h2>
+        <br>
+        <div class="card-columns">
+            <div class="card bg-warning" style="width:250px">
+                <img class="card-img-top" src="images/woman1.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Kelly</h4>
+                    <p class="card-text">Kelly has been a coach for 5 years. She is in charge of children's tennis interest lessons. </p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See all courses</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Wednesday-Friday</p>
+                        <p>1h CA$50.00</p>
+                        <p>Weekend</p>
+                        <p>1h CA$80.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-warning" style="width:250px">
+                <img class="card-img-top" src="images/man1.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Andy</h4>
+                    <p class="card-text">Andy has been a coach for 15 years. He is in charge of teaching professional tennis personal training.</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See all courses</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Weekend</p>
+                        <p>1h CA$150</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-warning" style="width:250px">
+                <img class="card-img-top" src="images/woman2.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Jessi</h4>
+                    <p class="card-text">Jessi has been a coach for 10 years. She is in charge of adult amateur tennis lessons.</p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See all courses</a>
+                    <div id="profile" class="collapse p-3">
+                        <p>Tuesday-Thursday</p>
+                        <p>1h CA$80</p>
+                        <p>Weekend</p>
+                        <p>1h CA$100</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <br><br>
+    <div id="calendar" class="container p-5">
+        <div class="col-sm-10 pl-5" id="coaches"> 
+            <h4 class="font-italic">The following is a list of available courses.</h4>
+            <p class="font-italic">If you need professional coaching, please click the "Book Now" button below the course you want to follow.</p>
+            <br>
+            <div>
+                <img src="images/class.jpg" alt="stylist" width="250px"><br>
+                <p>Children - Tennis interest class&nbsp;&nbsp;Coach: Kelly</p>
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#book1" style="width: 250px">Book Now</button>
+            </div>
+            <div>
+                <br><br>
+                <img src="images/man.jpg" alt="stylist" width="250px"><br>
+                <br><p>Adult - Tennis professional class &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coach: Andy</p>
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#book2" style="width: 250px">Book Now</button>
+            </div>
+            <div>
+                <br><br>
+                <img src="images/woman.jpg" alt="stylist" width="250px"><br>
+                <br><p>Adult - Amateur tennis class &nbsp;&nbsp;&nbsp;&nbsp;Coach: Jessi</p>
+                <button type="button" class="btn btn-info btn-warning" data-toggle="modal" data-target="#book3" style="width: 250px">Book Now</button>
+            </div>
+        </div>
+
+    <div class="modal fade" id="book1" role="dialog">
+        <div class="modal-dialog">  
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="other">
+                    <h3>Kelly will be at your service. <img src="images/icon1.png" alt="service" width="40px"></h3>
+                    <img src="images/calendar.png" alt="calendar" width="40px">
+                    <h3>Choose a date</h3>
+                    <input class="form-control" type="text" id="dateInput1">
+                    <br>
+                        <div class="md-form mb-5">
+                            <img src="images/person.png" alt="person" width="40px">
+                            <input type="text" class="form-control validate" placeholder="Enter your Name"> 
+                            
+
+                            <img src="images/phone.png" alt="phone" width="40px">
+                            <input id="phone1" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+
+                            
+                            <img src="images/card.png" alt="card" width="40px">
+                            <input id="debit1" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+
+                        </div>
+            </div>
+            <div id="confirm1"></div>
+
+            <script type="text/babel">
+
+            class Confirm1 extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value: 'Click here to submit your reservation and information!', color:"black"};
+                this.handleChange = this.handleChange.bind(this);
+            }
+            
+            handleChange(event) {
+                this.setState({value: 'Succeeded!'})
+            }
+            render() {
+                var value = this.state.value;
+                return <div>
+                        <button onClick={this.handleChange}>Submit!</button>
+                        <h6>{value}</h6>
+                    </div>;
+            }
+            }
+            ReactDOM.render(
+            <Confirm1 />, document.getElementById('confirm1')
+            );
+            </script>
+            <br><br>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>     
+    </div>
+    </div> 
+    </div>  
+
+    <div class="modal fade" id="book2" role="dialog">
+        <div class="modal-dialog">  
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="other">
+                    <h3>Andy will be at your service. <img src="images/icon1.png" alt="service" width="40px"></h3>
+                    <img src="images/calendar.png" alt="calendar" width="40px">
+                    <h3>Choose a date</h3>
+                    <input class="form-control" type="text" id="dateInput2">
+                    <br>
+                        <div class="md-form mb-5">
+                            <img src="images/person.png" alt="person" width="40px">
+                            <input type="text" class="form-control validate" placeholder="Enter your Name"> 
+                            
+
+                            <img src="images/phone.png" alt="phone" width="40px">
+                            <input id="phone2" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+
+                            
+                            <img src="images/card.png" alt="card" width="40px">
+                            <input id="debit2" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+
+                        </div>
+            </div>
+            <div id="confirm2"></div>
+
+            <script type="text/babel">
+
+            class Confirm extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value: 'Click here to submit your reservation and information!', color:"black"};
+                this.handleChange = this.handleChange.bind(this);
+            }
+            
+            handleChange(event) {
+                this.setState({value: 'Succeeded!'})
+            }
+            render() {
+                var value = this.state.value;
+                return <div>
+                        <button onClick={this.handleChange}>Submit!</button>
+                        <h6>{value}</h6>
+                    </div>;
+            }
+            }
+            ReactDOM.render(
+            <Confirm />, document.getElementById('confirm2')
+            );
+            </script>
+            <br><br>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>     
+    </div>
+    </div> 
+    </div>  
+
+    <div class="modal fade" id="book3" role="dialog">
+        <div class="modal-dialog">  
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="other">
+                   <h3>Jessi will be at your service. <img src="images/icon1.png" alt="service" width="40px"></h3>
+                    <img src="images/calendar.png" alt="calendar" width="40px">
+                    <h3>Choose a date</h3>
+                    <input class="form-control" type="text" style="color: black;" id="dateInput3">
+                    <br>
+                        <div class="md-form mb-5">
+                            <img src="images/person.png" alt="person" width="40px">
+                            <input type="text" class="form-control validate" placeholder="Enter your Name"> 
+                            
+
+                            <img src="images/phone.png" alt="phone" width="40px">
+                            <input id="phone3" class="form-control" type="text" inputmode="numeric" maxlength="10" placeholder="XXXXXXXXXX">
+
+                            
+                            <img src="images/card.png" alt="card" width="40px">
+                            <input id="debit3" class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="16" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+
+                        </div>
+            </div>
+            <div id="confirm3"></div>
+
+            <script type="text/babel">
+
+            class Confirm3 extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value: 'Click here to submit your reservation and information!', color:"black"};
+                this.handleChange = this.handleChange.bind(this);
+            }
+            
+            handleChange(event) {
+                this.setState({value: 'Succeeded!'})
+            }
+            render() {
+                var value = this.state.value;
+                return <div>
+                        <button onClick={this.handleChange}>Submit!</button>
+                        <h6>{value}</h6>
+                    </div>;
+            }
+            }
+            ReactDOM.render(
+            <Confirm3 />, document.getElementById('confirm3')
+            );
+            </script>
+            <br><br>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>     
+    </div>
+    </div> 
+    </div>  
+    </div>
+
+    <br><br>
+
+    <footer>
+        <div id="find" class="footer">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <hr class="light">    
+                    <h5>Our Information</h5>
+                    <hr class="light">
+                    <p>819-830-0328</p>
+                    <p>Alexiah0328@gmail.com</p>
+                    <p>265 Laurier Ave E</p>
+                    <p>Ottawa, ON, K1N, 6P7</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5 id="calendar">Hours of Availability</h5>
+                    <hr class="light">
+                    <p>Monday - Friday: 10am - 8pm</p>
+                    <p>Weekend: 12pm - 9pm</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Avalible Store</h5>
+                    <hr class ="light">
+                    <p>Toronto, ON</p>
+                    <p>Gatineau, QC</p>
+                    <p>Ottawa, ON</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light">
+                    <h2 class="font-italic">A VOS RAQUETTES Tennis Club</h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Communication</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+  
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="welcome.html" class="navbar_item navbar_button" style="font-family: 'Lobster', cursive;">A vos raquettes</a>
+        <a href="tenniscourt.html" class="navbar_item navbar_button" style="float: right;">Tennis Court</a>
+        <a href="courses.html" class="navbar_item navbar_button" style="float: right;">Coaches & Courses</a>
+        <a href="communication.html" class="navbar_item navbar_button" style="float: right;">Communication</a>
+        <div class="dropdown">
+            <button class="dropbtn"><img src="images/lang.png" alt="language" width="30px" height=30px"">&nbsp;Language</button>
+            <div class="dropdown-content">
+                <a href="communication.html">English</a>
+                <a href="communication_cn.html">中文</a>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+
+    <div id="communication" class="container">
+        <br>
+        <h2 class="font-italic">Communicate with other club members!</h2>
+        <p class="font-italic">Would you like to play singles or doubles with other members?</p>
+        <p class="font-italic">Here is a list of people who are interested in finding teammates.</p>
+        <p class="font-italic">If you are interested in other members, click the "Chat" button.</p>
+        <br><br>
+        <div id="example9"></div>
+
+            <script type="text/babel">
+            class Level extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {value: 'None'};
+
+                this.handleChange = this.handleChange.bind(this);
+                this.handleSubmit = this.handleSubmit.bind(this);
+            }
+
+            handleChange(event) {
+                this.setState({value: event.target.value});
+            }
+
+            handleSubmit(event) {
+                alert('Your level of tennis is ' + this.state.value);
+                event.preventDefault();
+            }
+
+            render() {
+                return (
+                <form onSubmit={this.handleSubmit}>
+                    <label>
+                    <h4>My level of tennis :</h4>
+                    <select value={this.state.value} onChange={this.handleChange}>
+                        <option value="select">----select----</option>
+                        <option value="basic">Basic</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    </label>
+                    <p></p>
+                    <button type="submit" value="Submit">Submit!</button>
+                </form>
+                );
+            }
+            }
+
+            ReactDOM.render(
+            <Level />,
+            document.getElementById('example9')
+            );
+            </script>
+
+            <br><br>
+        <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Signe/Double</th>
+            <th>Level</th>
+            <th>Communicate with him/her</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Harry Potter</td>
+            <td>Double</td>
+            <td>Basic</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">Chat</button></td>
+        </tr>
+        <tr>
+            <td>Hermione Granger</td>
+            <td>Single</td>
+            <td>High</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">Chat</button></td>
+        </tr>
+        <tr>
+            <td>Draco Malfoy</td>
+            <td>Single</td>
+            <td>Medium</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">Chat</button></td>
+        </tr>
+        <tr>
+            <td>Ron Weasley</td>
+            <td>Double</td>
+            <td>Medium</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">Chat</button></td>
+        </tr>
+        <tr>
+            <td>Luna Lovegood</td>
+            <td>Double</td>
+            <td>High</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">Chat</button></td>
+        </tr>
+        <tr>
+            <td>Albus Dumbledore</td>
+            <td>Single</td>
+            <td>Basic</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="">Chat</button></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    </div>
+
+
+    <br><br>
+
+    <footer>
+        <div id="find" class="footer">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <hr class="light">    
+                    <h5>Our Information</h5>
+                    <hr class="light">
+                    <p>819-830-0328</p>
+                    <p>Alexiah0328@gmail.com</p>
+                    <p>265 Laurier Ave E</p>
+                    <p>Ottawa, ON, K1N, 6P7</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5 id="calendar">Hours of Availability</h5>
+                    <hr class="light">
+                    <p>Monday - Friday: 10am - 8pm</p>
+                    <p>Weekend: 12pm - 9pm</p>
+                </div>
+                <div class="col-md-4">
+                    <hr class="light">
+                    <h5>Avalible Store</h5>
+                    <hr class ="light">
+                    <p>Toronto, ON</p>
+                    <p>Gatineau, QC</p>
+                    <p>Ottawa, ON</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light">
+                    <h2 class="font-italic">A VOS RAQUETTES Tennis Club</h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
