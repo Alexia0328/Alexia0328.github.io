@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <title></title>
+
+    <script type="text/javascript">
+
+        //定义全局变量，用于记录秒数
+
+        var n = 0;
+
+        window.onload = function () {
+
+            //设置定时器，重复执行函数add()
+
+            var t = setInterval("add()", 1000);
+
+            //点击“暂停”按钮事件
+
+            document.getElementById("btn_pause").onclick = function () {
+
+                clearInterval(t);
+
+            }
+
+            //点击“继续”按钮事件
+
+            document.getElementById("btn_continue").onclick = function () {
+
+                if (confirm("你还要继续装逼？")){
+
+                    t = setInterval("add()", 1000);
+
+                }
+
+            }
+
+        }
+
+        //定义计时函数
+
+        function add() {
+
+            n++;
+
+            document.getElementById("num").innerHTML = n;
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <p>你已经装了<span id="num">0</span>秒的“逼”，赶紧暂停吧！</p>
+
+    <input id="btn_pause" value="暂停" type="button"/>
+
+    <input id="btn_continue" value="继续" type="button" />
+
+</body>
+
+</html>
