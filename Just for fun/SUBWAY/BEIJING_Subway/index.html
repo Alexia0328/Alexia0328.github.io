@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--from高德 user-scalable=no：禁止双指缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no"/>
+    <title>
+        WUHAN SUBWAY
+    </title>
+</head>
+<body>
+    <div id="mysubway"></div> 
+    <script type="text/javascript" src="https://webapi.amap.com/subway?v=1.0&amp;key=19c5d1185f5231fd8206db73bc8c69b2&amp;callback=cbk"></script>
+    
+    <script type="text/javascript">
+    //开启easy模式, 直接完成地铁图基本功能, 无需自己写交互 window.cbk = function(){ var mysubway = subway("mysubway", { easy: 1 }); };
+        window.cbk = function(){ 
+            var mysubway = subway("mysubway", { easy: 1 }); 
+        };
+    </script>
+</body>
+</html>
